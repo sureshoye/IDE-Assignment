@@ -1,5 +1,5 @@
 //Declaring all variables as integers
-int Z=0,Y=0,X=0,W=1;
+int X=0,Y=0,Z=0;
 int D,C,B,A;
 
 //Code released under GNU GPL.  Free to use for anything.
@@ -21,10 +21,10 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
-  A=0;
-  B=(W&&!X&&!Y&&!Z) || (!W&&X&&!Y&&!Z) || (W&&!X&&Y&&!Z) || (!W&&X&&Y&&!Z);
-  C=(W&&X&&!Y&&!Z) || (!W&&!X&&Y&&!Z) || (W&&!X&&Y&&!Z) || (!W&&X&&Y&&!Z);
-  D = (W&&X&&Y&&!Z)||(!W&&!X&&!Y&&Z);
+  A= (X&&Y) || (X&&Z); 
+  B= (Y||Z);
+  C= (X&&Z);
+  D= (X&&Y);
   
 disp_7447(D,C,B,A);  
 }
