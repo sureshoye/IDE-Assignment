@@ -1,0 +1,109 @@
+This is pdfTeX, Version
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\title{
+Verification of First Distributive law of Boolean Algebra
+}
+\author{Beere Suresh}
+\begin{document}
+\maketitle
+\begin{abstract}
+This document shows the verification of first distributive law of Boolean Algerbra through Truth Table
+\end{abstract}
+\section{Statement}
+This law states that 
+X.(Y+Z) = X.Y + X.Z
+
+This law can be verified by the Truth table mentioned below:
+
+    \begin{table}[h]
+    \centering
+    \begin{tabular}{| c | c | c | c | c | c | c | c |}
+    \hline
+    \textbf{X} & \textbf{Y} & \textbf{Z} & \textbf{Y+Z} & \textbf{X.(Y+Z)} & \textbf{X.Y} & \textbf{X.Z} & \textbf{X.Y + X.Z} \\
+    \hline
+    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
+    \hline
+    0 & 0 & 1 & 1 & 0 & 0 & 0 & 0  \\
+    \hline
+    0 & 1 & 0 & 1 & 0 & 0 & 0 & 0  \\
+    \hline
+    0 & 1 & 1 & 1 & 0 & 0 & 0 & 0  \\
+    \hline
+   1 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
+    \hline
+    1 & 0 & 1 & 1 & 1 & 0 & 1 & 1  \\
+    \hline
+   1 & 1 & 0 & 1 & 1 & 1 & 0 & 1  \\
+    \hline
+    1 & 1 & 1 & 1 & 1 & 1 & 1 & 1  \\
+    \hline
+    \end{tabular}
+    \caption{1.1 Truth Table}
+    \label{tab:my_label}
+ \end{table}
+
+
+
+\section{Components}
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| c | c | c |}
+       \hline
+       \textbf{Component}  &  \textbf{Value}  &  \textbf{Qunatity}\\
+       \hline
+         Resistor  &  220Ohm  &  1  \\
+         \hline
+         Decoder  &  7447  &  1  \\
+         \hline
+         Arduino  & UNO & 1  \\
+         \hline
+         Jumper Wires  &  M-M  &  20  \\
+         \hline
+         BreadBoard  &    &  1\\
+         \hline
+         Sevenseg Display   &   &  1 \\
+          \hline
+    \end{tabular}
+    \caption{1.1 Components}
+    \label{tab:my_label}
+\end{table}
+\section{Hardware}
+
+\textbf{Problem 2.1}. Connect COM of Seven Segment Display to the 5V with a resistor of 220 Ohms in series. \\
+
+\textbf{Problem 2.2}. Make connections between the Arduino UNO, 7447 and Sevenseg Display as shown in Table 2.1 \\
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| c | c | c | c | c | c | c | c | c | c | c | c | c | c |}
+        \hline
+         Arduino & 2 & 3 & 4 & 5 & 5V & GND &  &  &  &  &  &  &  & \\
+       \hline
+       7447 & A & B & C & D & VCC & GND & a & b & c & d & e & f & g  \\
+        \hline
+       Sevenseg &  &  &  &  & COM &  & a & b & c & d & e & f & g  \\
+         \hline
+    \end{tabular}
+    \caption{2.1 Connections}
+    \label{tab:my_label}
+\end{table}
+\\
+
+
+
+\section{Software}
+
+\textbf{Problem 3.1} Now execute the following program and verify the outputs as mentioned in Table 3.1 by modifying the inputs X, Y, Z.\\
+\begin{table}[h]
+    \centering
+    \begin{tabular}{| c |}
+    \hline
+    wget https://github.com/sureshoye/IDE-Assignment/blob/\\main/distributivelaw.cpp\\
+    \hline
+    \end{tabular}
+    \caption{}
+    \label{}
+ \end{table}
+ \\
+\textbf{Note:} You will obtain the result as 0 in the sevensegment display for the given code.
+\end{document}
