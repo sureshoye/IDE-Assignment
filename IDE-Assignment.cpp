@@ -1,32 +1,21 @@
-//Declaring all variables as integers
-int X=0,Y=0,Z=0;
-int D,C,B,A;
-
-//Code released under GNU GPL.  Free to use for anything.
-void disp_7447(int D, int C, int B, int A)
-{
-  digitalWrite(2, A); //LSB
-  digitalWrite(3, B); 
-  digitalWrite(4, C); 
-  digitalWrite(5, D); //MSB
-
-}
-// the setup function runs once when you press reset or power the board
+#include <Arduino.h>
+int n=13;
+int m=12;
 void setup() {
-    pinMode(2, OUTPUT);  
-    pinMode(3, OUTPUT);
-    pinMode(4, OUTPUT);
-    pinMode(5, OUTPUT);
-}
+  pinMode(n, OUTPUT);
+  pinMode(m, OUTPUT);
+// put your setup code here, to run once:
 
-// the loop function runs over and over again forever
+//Declaring all variables as integers
+int Z=0,Y=,X=;
+int B,A;
+  A=(X&&(Y||Z));
+  B=(X&&Y) || (X&&Z);
+  digitalWrite(n, A);
+  digitalWrite(m, B);
+  // put your main code here, to run repeatedly:
+}
 void loop() {
-  A= (X&&Y) || (X&&Z); 
-  B= (Y || Z);
-  C= (X&&Z);
-  D= (X&&Y);
-  
-disp_7447(D,C,B,A);  
 }
 //&& is the AND operation
 // || is the OR operation
