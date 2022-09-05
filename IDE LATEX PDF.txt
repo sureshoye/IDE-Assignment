@@ -1,4 +1,3 @@
-This is pdfTeX, Version
 \documentclass[journal,12pt,twocolumn]{IEEEtran}
 \title{
 Verification of First Distributive law of Boolean Algebra
@@ -7,12 +6,12 @@ Verification of First Distributive law of Boolean Algebra
 \begin{document}
 \maketitle
 \begin{abstract}
-This document shows the verification of first distributive law of Boolean Algerbra through Truth Table
-\end{abstract}
-\section{Statement}
+This document shows the verification of first distributive law of Boolean Algerbra through 
 This law states that 
 X.(Y+Z) = X.Y + X.Z
-
+Truth Table
+\end{abstract}
+\section{Statement}
 This law can be verified by the Truth table mentioned below:
 
     \begin{table}[h]
@@ -51,17 +50,13 @@ This law can be verified by the Truth table mentioned below:
        \hline
        \textbf{Component}  &  \textbf{Value}  &  \textbf{Qunatity}\\
        \hline
-         Resistor  &  220Ohm  &  1  \\
-         \hline
-         Decoder  &  7447  &  1  \\
-         \hline
          Arduino  & UNO & 1  \\
          \hline
-         Jumper Wires  &  M-M  &  20  \\
+         Jumper Wires  &  M-M  &  2  \\
          \hline
          BreadBoard  &    &  1\\
          \hline
-         Sevenseg Display   &   &  1 \\
+        LED   &   &  1 \\
           \hline
     \end{tabular}
     \caption{1.1 Components}
@@ -69,19 +64,19 @@ This law can be verified by the Truth table mentioned below:
 \end{table}
 \section{Hardware}
 
-\textbf{Problem 2.1}. Connect COM of Seven Segment Display to the 5V with a resistor of 220 Ohms in series. \\
 
-\textbf{Problem 2.2}. Make connections between the Arduino UNO, 7447 and Sevenseg Display as shown in Table 2.1 \\
+
+\textbf{Problem 2.2}. Make connections between the Arduino UNO, and LED as shown in Table 2.1 \\
 
 \begin{table}[h]
     \centering
-    \begin{tabular}{| c | c | c | c | c | c | c | c | c | c | c | c | c | c |}
+    \begin{tabular}{| c | c | c |}
         \hline
-         Arduino & 2 & 3 & 4 & 5 & 5V & GND &  &  &  &  &  &  &  & \\
+         Arduino & 12 & GND  \\
        \hline
-       7447 & A & B & C & D & VCC & GND & a & b & c & d & e & f & g  \\
+       LED & + ve & - ve  \\
         \hline
-       Sevenseg &  &  &  &  & COM &  & a & b & c & d & e & f & g  \\
+      
          \hline
     \end{tabular}
     \caption{2.1 Connections}
@@ -105,5 +100,6 @@ This law can be verified by the Truth table mentioned below:
     \label{}
  \end{table}
  \\
-\textbf{Note:} You will obtain the result as 0 in the sevensegment display for the given code.
+\textbf{Note:} You will observe that the light adjacent to PIN 13 and LED bulb glow together.
 \end{document}
+
