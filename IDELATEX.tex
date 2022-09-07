@@ -1,0 +1,104 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\title{
+Verification of First Distributive law of Boolean Algebra
+}
+\author{Beere Suresh}
+\begin{document}
+\maketitle
+\begin{abstract}
+This document shows the verification of first distributive law of Boolean Algerbra through Truth Table
+\end{abstract}
+\section{Statement}
+This law states that 
+X.(Y+Z) = X.Y + X.Z
+
+This law can be verified by the Truth table mentioned below:
+\begin{table}[h]
+    	\centering
+	\begin{tabular}{| c | c | c | c | c | c | c | c |}
+	\hline
+	\textbf{X} & \textbf{Y} & \textbf{Z} & \textbf{Y+Z} & \textbf{X.(Y+Z)} & \textbf{X.Y} & \textbf{X.Z} & \textbf{X.Y + X.Z} \\
+	\hline
+	0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
+	 \hline
+	 0 & 0 & 1 & 1 & 0 & 0 & 0 & 0  \\
+	 \hline
+	 0 & 1 & 0 & 1 & 0 & 0 & 0 & 0  \\
+	 \hline
+	0 & 1 & 1 & 1 & 0 & 0 & 0 & 0  \\
+	\hline
+	1 & 0 & 0 & 0 & 0 & 0 & 0 & 0  \\
+	\hline
+	1 & 0 & 1 & 1 & 1 & 0 & 1 & 1  \\
+	\hline
+	1 & 1 & 0 & 1 & 1 & 1 & 0 & 1  \\
+	\hline
+	1 & 1 & 1 & 1 & 1 & 1 & 1 & 1  \\
+	\hline
+	\end{tabular}
+	\caption{1.1 Truth Table}
+	\label{tab:my_label}
+\end{table}
+\section{Components}
+\begin{table}[h]
+	\centering
+    	\begin{tabular}{| c | c | c |}
+	\hline
+	\textbf{Component}  &  \textbf{Value}  &  \textbf{Qunatity}\\
+	\hline
+	Arduino  & UNO & 1  \\
+	\hline
+	Jumper Wires  &  M-M  &  2  \\
+	\hline
+	BreadBoard  &    &  1\\
+	\hline
+	LED   &   &  1 \\
+	\hline
+\end{tabular}
+\caption{1.1 Components}
+\label{tab:my_label}
+\end{table}
+\section{Hardware}
+
+\textbf{Problem 2.1}. Make connections between the Arduino UNO, and LED as shown in Table 2.1 \\
+
+
+\begin{table}[h]
+    	\centering
+	\begin{tabular}{| c | c | c |}
+	\hline
+	Arduino & 12 & GND \\
+	\hline
+	LED & + ve & - ve \\
+	\hline
+
+	\hline
+\end{tabular}
+\caption{2.1 Connections}
+\end{table}
+\section{Software}
+\textbf{Problem 3.1} Now connect the Arduino to the computer and execute the following program and verify the outputs as mentioned in Table 3.1 by modifying the inputs X, Y, Z.\\
+\begin{table}[h]
+	\raggedleft
+	\begin{tabular}{| c |}
+	\hline
+	svn co https://github.com/sureshoye/IDE-Assignment/trunk/\\codes\\
+	
+	
+	cd codes \\
+
+	pio run \\
+
+	pio run -t nobuild -t upload \\
+    	
+	\hline
+        \end{tabular}
+
+	\caption{}
+ \end{table}
+ 
+ \textbf{Result} You will observe that the light adjacent to Pin 13 and LED bulb glow together.
+ \\
+ \textbf{Problem 3.2} Now type "cd src" and open the programming code using the command "nano main.cpp" and modify the values of X,Y and Z in the programming code main.cpp file such that both LED and Light adjacent to Pin 13 turn off and then recompile it
+\\
+\end{document}
