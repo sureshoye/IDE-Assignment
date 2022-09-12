@@ -7,7 +7,7 @@ void setup() {
 // put your setup code here, to run once:
 
 //Declaring all variables as integers
-int Z=0,Y=0,X=1;
+int Z=1,Y=0,X=1;
 int B,A;
   A=(X&&(Y||Z));
   B=(X&&Y) || (X&&Z);
